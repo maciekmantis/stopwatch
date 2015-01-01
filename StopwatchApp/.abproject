@@ -1,0 +1,37 @@
+{
+  "ProjectName": "StopwatchApp",
+  "ProjectGuid": "4dd80309-6244-44f9-b8be-2f35a358e8df",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.StopwatchApp",
+  "DisplayName": "StopwatchApp",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{4b51022f-65b2-4ace-98e0-a6d26ffbeafa}",
+  "WP8ProductID": "{debbfe07-a456-4755-b06e-b1a5cbc4566c}",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
