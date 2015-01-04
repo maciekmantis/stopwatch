@@ -18,25 +18,64 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World!</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+<head>
+    <!--     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>StopwatchApp</title>
+    <link rel="stylesheet" type="text/css" href="css/ionicons.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/1.0.0-beta.14/css/ionic.css">
+    <script src="http://code.ionicframework.com/1.0.0-beta.14/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="StopwatchApp">
+    <ion-side-menus>
+        <ion-side-menu-content ng-controller="ContentCtrl">
+            <ion-header-bar class="bar-positive">
+                <a class="button button-clear ion-navicon" menu-toggle="left" style="font-size: x-large;"></a>
+                <h1 class="title">Stopwatch</h1>
+                <a class="button button-clear ion-ios-plus-empty" ng-click="onAdd()" style="font-size: x-large;"></a>
+            </ion-header-bar>
+            <ion-content>
+                <ion-list>
+                    <ion-item ng-repeat="item in items">
+                        <div style="line-height: 4;">
+                            <span>{{item.title}}</span>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu-content>
+        <ion-side-menu side="left">
+            <ion-header-bar class="bar-positive">
+                <h1 class="title">Menu</h1>
+            </ion-header-bar>
+        </ion-side-menu>
+        <script id="new-stopwatch.html" type="text/ng-template">
+            <div class="modal">
+                <ion-header-bar class="bar-secondary">
+                    <h1 class="title">New Stopwatch</h1>
+                    <button class="button button-clear button-positive" ng-click="onCancel()">Cancel</button>
+                </ion-header-bar>
+                <ion-content>
+                    <form ng-submit="onCreate(stopwatch)">
+                        <div class="list">
+                            <label class="item item-input">
+                                <input type="text" placeholder="Type name for new stopwatch" ng-model="stopwatch.title">
+                            </label>
+                        </div>
+                        <div class="padding">
+                            <button type="submit" class="button button-block button-positive">Create Stopwatch</button>
+                        </div>
+                    </form>
+                </ion-content>
             </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
         </script>
-    </body>
+    </ion-side-menus>
+</body>
+
 </html>

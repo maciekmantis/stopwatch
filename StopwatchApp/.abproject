@@ -5,7 +5,7 @@
   "AppIdentifier": "com.telerik.StopwatchApp",
   "DisplayName": "StopwatchApp",
   "Author": "",
-  "Description": "",
+  "Description": "StopwatchApp",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
